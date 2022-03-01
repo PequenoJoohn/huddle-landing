@@ -1,0 +1,61 @@
+.grow-together {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $veryPaleBlue;
+    position: relative;
+    margin: 10rem 0;
+    padding: 0 3.125rem;
+    flex-wrap: wrap;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 160px;
+        top: -160px;
+        left: 0;
+        background-image: url("../images/bg-section-top-desktop-1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 160px;
+        bottom: -160px;
+        left: 0;
+        background-image: url("../images/bg-section-bottom-desktop-1.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    div {
+        h2 {
+            padding-bottom: 1rem;
+        }
+
+        p {
+            max-width: 520px;
+        }
+    }
+
+    figure {
+        max-width: 600px;
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 1220px) {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0 3.125rem;
+        
+        h2 {
+            margin-top: 2rem;
+        }
+    }
+}

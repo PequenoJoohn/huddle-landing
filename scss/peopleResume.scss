@@ -1,0 +1,74 @@
+.people-resume {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 3.125rem;
+
+    div {
+        flex: 0 0 400px;
+
+        &:first-child {
+            max-width: 400px;
+            h2 {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 30px;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    background-image: url(../images/icon-communities.svg);
+                    top: -30px;
+                }
+            }
+
+            p {
+                color: $veryDarkCyan;
+                padding: 1rem 0 0 0;
+            }
+        }
+
+        &:last-child {
+            h2 {
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 30px;
+                    height: 100%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    background-image: url(../images/icon-messages.svg);
+                    top: -30px;
+                }
+            }
+
+            p {
+                padding: 1rem 0 0 2rem;
+                color: $veryDarkCyan;
+            }
+        }
+
+        h2 {
+            font-size: 64px;
+            font-family: $openSans;
+        }
+
+        & + div {
+            margin-left: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 990px) {
+        flex-wrap: wrap;
+        
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+    }
+}

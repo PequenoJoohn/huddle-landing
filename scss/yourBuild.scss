@@ -1,0 +1,33 @@
+.your-build {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10rem 0;
+    margin-bottom: 10rem;
+
+    h2 {
+        margin-bottom: 1.275rem;
+    }
+
+    button {
+        margin: 0 auto;
+        border-radius: 25px;
+        border: 0;
+        padding: 1rem;
+        width: 300px;
+        font-weight: bold;
+        background-color: $pink;
+        border: 2px solid $pink;
+        color: $veryPaleBlue;
+        margin-top: 2rem;
+        box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+        transition: 0.3s background;
+
+        &:hover {
+            background-color: $lightPink;
+            border: 2px solid transparent;
+        }
+    }
+}
