@@ -45,7 +45,7 @@
             }
 
             p {
-                padding: 1rem 0 0 2rem;
+                padding: 1rem 0 0 0;
                 color: $veryDarkCyan;
             }
         }
@@ -62,13 +62,17 @@
 
     @media screen and (max-width: 990px) {
         flex-wrap: wrap;
-        
+
         div {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             margin-bottom: 5rem;
+
+            &:first-child,  &:last-child {
+                max-width: 100%;
+            }
         }
     }
 }
